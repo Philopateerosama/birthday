@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -276,3 +277,283 @@
     </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلادك</title>
+    
+    <!-- استدعاء Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- 
+      استيراد خطوط عربية فخمة تليق بتصميم الزفاف:
+      1. Aref Ruqaa: كبديل لخط الـ Script (للأسماء والعناوين الجمالية)
+      2. Amiri: كبديل لخط السيريف الكلاسيكي
+      3. Tajawal: كبديل لخط السانس المودرن (للقراءة الواضحة)
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        script: ['"Aref Ruqaa"', 'serif'], 
+                        serif: ['Amiri', 'serif'],
+                        sans: ['Tajawal', 'sans-serif'], 
+                    },
+                    // نفس ألوانك الراقية بالظبط
+                    colors: {
+                        cream: '#FDFBF6', 
+                        sage: '#8A9A86',  
+                        sageDark: '#70806c',
+                        textDark: '#2C332A',
+                        accentPink: '#d4a3a3',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #FDFBF6;
+            color: #2C332A;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        /* نفس تأثير الظهور الناعم اللي في موقع الزفاف */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* تأثير السهم المتحرك */
+        .scroll-down {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        /* لمسة بسيطة لصور الذكريات عشان تبان ناعمة */
+        .photo-memory {
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(44, 51, 42, 0.08);
+            transition: transform 0.5s ease;
+            aspect-ratio: auto !important;
+            height: auto !important;
+        }
+        .photo-memory:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="font-sans text-center selection:bg-sage selection:text-white">
+
+    <!-- Section 1: Hero / الافتتاحية -->
+    <section class="min-h-screen flex flex-col items-center justify-center relative px-4">
+        
+        <p class="font-sans uppercase tracking-[0.2em] text-accentPink text-sm md:text-base font-medium mb-6">
+            النهارده غير كل الأيام
+        </p>
+
+        <h1 class="font-script text-7xl md:text-9xl text-sageDark mb-6 leading-tight">
+            كل سنه وأنتِ طيبة يا ستي
+        </h1>
+        
+        <p class="font-serif italic text-xl md:text-2xl text-gray-500">
+           عيد ميلادك ال 26 غالباً<br>
+           فا نركز سوى كده علشان المره ديه قررت اعيد عليكي علي طريقتي
+        </p>
+        
+        <div class="absolute bottom-16 scroll-down cursor-pointer" onclick="document.getElementById('main-content').scrollIntoView({behavior: 'smooth'})">
+            <p class="font-sans text-accentPink mb-5 text-xs tracking-widest text-center uppercase">انزلي بقي هتفضلي فوق كتير</p>
+            <svg class="w-5 h-5 mx-auto text-accentPink" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </section>
+
+    <div id="main-content">
+        
+        <!-- Section 2: Intro Message / رسالة التهنئة -->
+        <section class="py-20 px-4 fade-in max-w-3xl mx-auto">
+            <!-- صورتها الأساسية -->
+            <img src="memory1.jpg" 
+                 alt="صورة أختي" 
+                 class="w-full max-w-md mx-auto mb-12 photo-memory object-cover aspect-[4/5]">
+
+            <h2 class="font-script text-4xl md:text-7xl mb-6 text-textDark">كل سنه وانتي طيبه يا حببتي</h2>
+            
+            <p class="font-serif text-lg md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+                احلي عيد ميلاد واحلي يوم فالسنه<br>
+                مش علشان عيد ميلادك لا ده علشان هنجيب تورته و حاجه ساقعه ,معلش مصلحه بطني اهم , كملي نزول 😘
+            </p>
+            
+            <div class="w-full max-w-xs h-px bg-gray-200 mx-auto mt-10 relative">
+                <div class="absolute left-1/2 -top-2 -translate-x-1/2 text-sage bg-cream px-3 text-sm font-script">♥</div>
+            </div>
+        </section>
+
+        <!-- Section 3: Memories Feed / الذكريات (بستايل نظيف جداً) -->
+        <section class="py-24 px-4 fade-in max-w-3xl mx-auto flex flex-col items-center text-center">
+            
+            <div class="mb-16 flex flex-col items-center">
+                <h2 class="font-script text-5xl md:text-7xl text-sageDark mb-4 leading-tight">
+                    نخش فالصور بقي
+                </h2>
+                <p class="font-serif text-xl text-gray-500">كل صوره ليها موقف او ذكرا <br> بس اكيد مش فاكرها 😁</p>
+            </div>
+
+            <!-- قائمة الصور -->
+            <div class="w-full flex flex-col gap-32">
+                
+                <!-- 📸 بلوك الصورة 1 -->
+                <div class="fade-in w-full">
+                    <img src="memory2.jpg" alt="ذكرى 1" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">بتتخرجي من المدرسه و كده فالف مبروك يعم😉</h3>
+                </div>
+
+                <!-- 📸 بلوك الصورة 2 -->
+                <div class="fade-in w-full">
+                    <img src="memory3.jpg" alt="ذكرى 2" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">لا و كمان متصورين منغيري </h3>
+                    <p class="font-sans text-gray-500 text-base">عادي هتصور منغيركوا</p>
+                </div>
+
+                <!-- 📸 بلوك الصورة 3 -->
+                <div class="fade-in w-full">
+                    <img src="memory4.jpg" alt="ذكرى 3" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">صوره بالذكاء الاسطباحي</h3>
+                    <p class="font-sans text-gray-500 text-base">😎كان معايه قهوه وانتي لا</p>
+                </div>
+
+                <!-- 📸 بلوك الصورة 4 -->
+                <div class="fade-in w-full">
+                    <img src="memory5.jpg" alt="ذكرى 4" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">ايه ده ايه ده ايه ده</h3>
+                    <p class="font-sans text-gray-500 text-base">صوره ولا كان هيجي علي بالك انها معايه <br>هكر بقي و كده😉😎</p>
+                </div>
+
+                <!-- 📸 بلوك الصورة 5 -->
+                <div class="fade-in w-full">
+                    <img src="memory6.jpg" alt="ذكرى 5" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">لو شطره تقولي مين فينا اللي تم ال20</h3>
+                </div>
+
+                <!-- 📸 بلوك الصورة 6 -->
+                <div class="fade-in w-full">
+                    <img src="memory7.jpg" alt="ذكرى 6" class="w-full max-w-md mx-auto photo-memory mb-5 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">اول سفريه لينا لوحدنا خالص</h3>
+                    <p class="font-sans text-gray-500 text-base">غالبا يعني😊😊</p>
+                </div>
+
+                <!-- 📸 بلوك الصورة 7 -->
+                <div class="fade-in w-full">
+                    <img src="memory8.jpg" alt="ذكرى 7" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">ياااه حافله تخرجي</h3>
+                    <p class="font-sans text-gray-500 text-base">امور انا وبردوا يسلام عريس😎</p>
+                </div>
+
+                <!-- 📸 بلوك الصورة 8 -->
+                <div class="fade-in w-full">
+                    <img src="memory9.jpg" alt="ذكرى 8" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">تاني تاني هو نفس اليوم هيهيهيهه</h3>
+                </div>
+
+                <!-- 📸 بلوك الصورة 9 -->
+                <div class="fade-in w-full">
+                    <img src="memory10.jpg" alt="ذكرى 9" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">وقت الخنق</h3>
+                    <p class="font-sans text-gray-500 text-base">احلا ضحكه بشوفها بس معرف بتخبيها عني ليه😣</p>
+                </div>
+
+                <!-- 📸 بلوك الصورة 10 -->
+                <div class="fade-in w-full">
+                    <img src="memory11.jpg" alt="ذكرى 10" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">اللي مفسحاناااااااي </h3>
+                    <p class="font-sans text-gray-500 text-base">هو اللي ماكلنا هو<br>هو اللي مشربنا هو</p>
+                </div>
+
+                <!-- 📸 بلوك الصورة 11 -->
+                <div class="fade-in w-full">
+                    <img src="memory12.jpg" alt="ذكرى 11" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">نفس الخروجه بس من ذاويه تانيه</h3>
+                    <p class="font-sans text-gray-500 text-base">بجد كان يوم حلو اوي مش هقول اكتر من كده لاني مفيش كلام يتقال بجد بحبك يا ستي خدي لايك👍</p>
+                </div>
+
+                <!-- 📸 بلوك الصورة 12 -->
+                <div class="fade-in w-full">
+                    <img src="memory13.jpg" alt="ذكرى 12" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">انا مش فاكر كان ايه المناسبه بس روحنا cinabon غالبا</h3>
+                </div>
+
+                <!-- 📸 بلوك الصورة 13 -->
+                <div class="fade-in w-full">
+                    <img src="memory14.jpg" alt="ذكرى 13" class="w-full max-w-md mx-auto photo-memory mb-8 object-cover aspect-[4/5]">
+                    <h3 class="font-serif text-3xl text-textDark mb-3">تاني تاني حفله تخرجي هيهيهيه</h3>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 4: Notes & Wishes / أمنيات من القلب (بنفس ستايل Notes الزفاف) -->
+        <section class="py-24 px-4 fade-in max-w-3xl mx-auto border-t border-sage/20 mt-10">
+            <h2 class="font-script text-6xl md:text-8xl mb-16 text-sageDark">و بس كده حبيت اعيد عليكي بشكل جديد </h2>
+
+            <div class="space-y-16 text-center">
+                <p class="font-sans text-base text-gray-600 leading-relaxed max-w-xl mx-auto">
+                    و انهي ببجد احلي كل سنه وانتي طيبه يا احلي و اجدع اخت فالدنيه اشطر خادمه ربنا معاكي فحياتك اللي جيه و انا كمان معاكي هيهيه و تبقي اهم واحده فالشغل بس ده كده كده اصلا هما نالوا شرف وجودك معاهم و بس كفايه عليكي كده بقي انا كنت مشتها رساله واتساب و خلاص يعني مش فاهم انا.
+                </p>
+                
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-16 mt-20 text-center border-t border-sage/10">
+            <h2 class="font-script text-5xl text-accentPink mb-6">بحبك يعم😉</h2>
+            
+        </footer>
+    </div>
+
+    <script>
+        // الطريقة الجديدة المضمونة 100% لحساب ظهور العناصر
+        function checkVisibility() {
+            const elements = document.querySelectorAll('.fade-in');
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                // لو قمة العنصر دخلت في نطاق الشاشة (مع مسافة بسيطة 50 بيكسل)
+                if (rect.top <= windowHeight - 50) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        // تشغيل الدالة فوراً عشان تظهر أي حاجة في بداية الصفحة
+        checkVisibility();
+
+        // ربط الدالة بحركة السكرول في كل الحالات (Windows & Body) عشان تدعم الـ Preview
+        window.addEventListener('scroll', checkVisibility);
+        document.body.addEventListener('scroll', checkVisibility);
+        
+        // احتياطي عشان لو حجم الشاشة اتغير أو حملت ببطء
+        window.addEventListener('load', checkVisibility);
+        window.addEventListener('resize', checkVisibility);
+    </script>
+</body>
+</html>
+>>>>>>> d36b04a34264a31049efe3d5f11a78995446b4c3
